@@ -1,0 +1,37 @@
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+}
+
+.main-navigation {
+  height: 90px;
+}
+.nav-links {
+  padding: 0 15px;
+  text-transform: uppercase;
+  color:black;
+  transition-duration: 500ms;
+  font-weight: 600;
+
+  &:hover {
+    color: #00aeef;
+  }
+}
+
+.booking-btn {
+  color: #ffffff;
+  font-weight: 600;
+  min-width: 140px;
+  height: 40px;
+  line-height: 36px;
+  font-size: 12px;
+
+  &:hover {
+    background-color: #ffffff;
+  }
+}

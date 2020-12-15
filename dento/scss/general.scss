@@ -1,0 +1,28 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s all ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn {
+  padding: 0 20px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid #00aeef;
+  border-radius: 2px;
+  background-color: #00aeef;
+  transition: all 500ms;
+
+  &:hover {
+    color: #00aeef;
+  }
+}
