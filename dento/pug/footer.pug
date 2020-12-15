@@ -1,70 +1,97 @@
 .footer__footer
   .container
-    .footer__top-content.text-center
-      h3 Subsribe Newsletter
-      p
-        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ex
-        | temporibus magni ipsam inventore dolorum sunt, amet vel.
-      form.footer__form(action='')
-        .row
-          .col-md-9
-            input.form-control.footer__email(type='text', placeholder='Enter Email Address')
-          .col-md-3
-            input.subscribe-button(type='submit', value='Subscribe')
-    .footer__middle-content
+    .footer__content
       .row
-        .col-sm-4
+        .col-12.col-sm-6.col-lg-4
           .footer__widget
-            h3 About Us
-            p
-              | Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              | Voluptatibus et dolor blanditiis consequuntur ex voluptates
-              | perspiciatis omnis unde minima expedita.
-            ul.footer__icons
-              li
-                a(href='#')
-                  i.fa.fa-twitter
-              li
-                a(href='#')
-                  i.fa.fa-facebook
-              li
-                a(href='#')
-                  i.fa.fa-linkedin
-              li
-                a(href='#')
-                  i.fa.fa-instagram
-        .col-sm-5
+            a.d-block.mb-4(href="index.pug")
+              img(src="https://preview.colorlib.com/theme/dento/img/core-img/logo.png")
+            p.footer__brand-text
+              | Etiam sutor risus, dapibus act elefend katen,
+              | lacinia sitamet denim. Mauris sagittis kansa
+              | interdum dignissim.
+            .footer__address
+              p
+                i.fa.fa-location-arrow  
+                |  28 Jackson Street, Chicago, 7788569 USA
+              p
+                i.fa.fa-phone  
+                | +84. 2252. 2250. 122
+              p
+                i.fa.fa-envelope  
+                | info.dento@gmail.com
+        .col-12.col-sm-6.col-lg
           .footer__widget
-            .opening-hours
-              h3 Opening Hours
-              .black-text Sunday-Thursday
-              span 5AM - 10PM
-            .contact-info
-              h3 Contact Info
-              .black-text Address:
-              span 34 Street Name, City Name Here, United States
-              .black-text Phone:
-              span +1 242 4942 290
-              .black-text Email:
-              span info@yourdomain.com
-        .col-sm-3
+            h4 Opening Hours
+            ul.footer__hours
+              li
+                span Mon-Wed
+                span 8.00-18.00
+              li
+                span Thu-Fri
+                span 8.00-17.00
+              li
+                span Sat
+                span 9.00-17.00
+              li
+                span Sun
+                span 10.00-17.00
+              li
+                span Holiday
+                span Closed
+        .col-12.col-sm-6.col-lg
           .footer__widget
-            h3 Quick Links
-            ul.footer__links
+            h4 Quick Links
+            ul.footer__quick-links
               li
                 a(href='#') About
-              li
-                a(href='#') Terms of Use
-              li
-                a(href='#') Disclaimers
+              li  
+                a(href='#') FAQS
               li
                 a(href='#') Contact
+              li  
+                a(href='#') Policy
+              li
+                a(href='#') News
+              li
+                a(href='#') Advisors
+              li
+                a(href='#') Careers
+              li
+                a(href='#') Dentist
+              li
+                a(href='#') Services
+              li
+                a(href='#') Legal
+        .col-12.col-sm-6.col-lg
+          .footer__widget
+            h4 Newsletter
+            p We will send out weekly newest article and some great offers
+            .footer__newsletter-form
+              .form-group
+                input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Enter Address')
+                button(type='submit')
+                  i.fa.fa-paper-plane
+            .footer__social-links
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook')
+                i.fa.fa-facebook
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter')
+                i.fa.fa-twitter
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Google Plus')
+                i.fa.fa-google-plus
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Linkedin')
+                i.fa.fa-linkedin
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest')
+                i.fa.fa-pinterest  
   .footer__copyright
     .container
-      .row
-        .col-sm-12
-          p.copyright__text.text-center
-            | Copyright ©2020 All rights reserved | This template is made with
-            i.fa.fa-heart-o
-            |  by
-            a(href='#') Colorlib
+      .footer__copyright-content
+        .row
+          .col-12
+            p.copyright__text.text-center
+              | Copyright &copy;
+              | 2020 All rights reserved | This template is made with 
+              i.fa.fa-heart-o(aria-hidden='true')
+              |  by 
+              a(href='https://colorlib.com' target='_blank') Colorlib
+
