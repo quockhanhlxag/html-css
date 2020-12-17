@@ -106,14 +106,14 @@
   }
 
   .booking-btn {
-    color: #ffffff;
+    color: $mainColor;
     font-weight: 600;
     height: 40px;
     line-height: 36px;
     font-size: 12px;
 
     &:hover {
-      background-color: #ffffff;
+      background-color: $mainColor;
     }
   }
 
