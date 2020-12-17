@@ -1,0 +1,120 @@
+.footer {
+  &__footer {
+    background-image: url(https://preview.colorlib.com/theme/dento/img/bg-img/3.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0 20px 0;
+    color: $mainColor;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: linear-gradient(to right, #2c455d, #00012c);
+      opacity: 0.85;
+    }
+  }
+
+  &__widget {
+    margin-bottom: 100px;
+
+    h4 {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__brand-text {
+    margin-bottom: 15px;
+  }
+
+  &__address p i {
+    margin-right: 5px;
+    color:$primaryColor;
+  }
+
+  &__hours li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+  }
+
+  &__quick-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    a {
+      color: $mainColor;
+      transition: 0.3s all;
+
+      &:hover {
+        color:$primaryColor;
+      }
+    }
+
+    li {
+      flex: 0 0 50%;
+      max-width: 50%;
+      width: 50%;
+      margin-bottom: 17px;
+    }
+
+  }
+
+  &__social-links a {
+    margin-right: 20px;
+    color: $mainColor;
+  }
+
+  &__newsletter-form {
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 30px;
+
+    input {
+      padding: 0 15px;
+      border-radius: 2px;
+      height: 40px;
+    }
+
+    button {
+      width: auto;
+      position: absolute;
+      padding: 0 15px;
+      background:$primaryColor;
+      border: none;
+      border-radius: 0 2px 2px 0;
+      height: 40px;
+      top: 0;
+      right: 0;
+      line-height: 40px;
+      color: $mainColor;
+      transition: 0.5s all;
+
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
+
+  &__copyright-content {
+    padding-top: 20px;
+    border-top: 1px solid #576a7d;
+
+    .copyright__text {
+      color: #b7b7b7;
+      font-size: 12px;
+
+      a {
+        color: $mainColor;
+      }
+    }
+  }
+}

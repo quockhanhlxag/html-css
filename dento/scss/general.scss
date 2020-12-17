@@ -1,6 +1,13 @@
 ul {
   list-style: none;
   padding: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  line-height: 1.9;
   margin-bottom: 0;
 }
 
@@ -24,5 +31,25 @@ a {
 
   &:hover {
     color: $primaryColor;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .line {
+    width: 70px;
+    height: 4px;
+    background-color: $primaryColor;
   }
 }
