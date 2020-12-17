@@ -5,7 +5,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 100px 0 20px 0;
-    color: white;
+    color: $mainColor;
     position: relative;
     z-index: 1;
 
@@ -51,7 +51,7 @@
     flex-wrap: wrap;
 
     a {
-      color: white;
+      color: $mainColor;
       transition: 0.3s all;
 
       &:hover {
@@ -70,7 +70,7 @@
 
   &__social-links a {
     margin-right: 20px;
-    color: white;
+    color: $mainColor;
   }
 
   &__newsletter-form {
@@ -95,7 +95,7 @@
       top: 0;
       right: 0;
       line-height: 40px;
-      color: white;
+      color: $mainColor;
       transition: 0.5s all;
 
       &:hover {
@@ -113,7 +113,7 @@
       font-size: 12px;
 
       a {
-        color: white;
+        color: $mainColor;
       }
     }
   }
