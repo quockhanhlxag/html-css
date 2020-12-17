@@ -1,0 +1,6 @@
+mixin cta(number, title, icon)
+  .cta__single.text-center
+    i(class!=attributes.class)= icon
+    h2
+      span.counter=number
+    h5=title
