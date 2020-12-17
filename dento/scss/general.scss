@@ -20,20 +20,6 @@ a {
   }
 }
 
-.btn {
-  padding: 0 20px;
-  text-transform: uppercase;
-  text-align: center;
-  border: 2px solid $primaryColor;
-  border-radius: 2px;
-  background-color: $primaryColor;
-  transition: all 500ms;
-
-  &:hover {
-    color: $primaryColor;
-  }
-}
-
 img {
   max-width: 100%;
   height: auto;

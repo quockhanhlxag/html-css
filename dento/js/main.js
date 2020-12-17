@@ -1,7 +1,3 @@
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-
 function addStickyBar(){
   window.addEventListener("scroll", function () {
     var scrollY = window.scrollY;
@@ -17,16 +13,12 @@ function addStickyBar(){
   });
 }
 
-addStickyBar()
-
 function addRotateHambar() {
   document.getElementById("hambar").addEventListener("click", function(){
     var hambar = $("#hambar")
     hambar.toggleClass("active")
   })
 }
-
-addRotateHambar()
 
 function displaySidebar() {
   document.getElementById("hambar").addEventListener("click", function(){
@@ -35,5 +27,10 @@ function displaySidebar() {
   })
 }
 
-displaySidebar()
 
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  addStickyBar()
+  addRotateHambar()
+  displaySidebar()
+})

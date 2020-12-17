@@ -1,3 +1,4 @@
+include mixin/mixins.pug
 doctype html
 head
   meta(charset='UTF-8')
@@ -8,6 +9,7 @@ head
   link(rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css")
   link(rel="stylesheet" href="scss/style.scss")
 body
+  include pug/header-top.pug
   include pug/header.pug
   include pug/footer.pug
 script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js")
