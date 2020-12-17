@@ -23,7 +23,7 @@ header
 								i.fa.fa-linkedin
 							a(href="#" data-toggle='tooltip' data-placement='bottom' title='Pinterest')
 								i.fa.fa-pinterest
-		.dento__header-main
+		.dento__header-main#nav-bar
 			.container
 				nav.main-navigation
 					a.nav-brand(href="index.pug")
@@ -32,16 +32,51 @@ header
 						ul.navigation
 							li
 								a.nav-links(href="index.pug") Home
-							li
-								a.nav-links(href="index.pug") Page
+							li.drop-down#mainbar-dropdown
+								a.nav-links(href="#") Page
+								.dropdown-content
+									a(href="#") - Home
+									a(href="#") - About Us
+									a(href="#") - Service
+									a(href="#") - Pricing
+									a(href="#") - Blog
+									a(href="#") - Blog Details
+									a(href="#") - Contact
+									a(href="#") - Dropdown
+
 							li
 								a.nav-links(href="index.pug") About
 							li
 								a.nav-links(href="index.pug") Service
 							li
 								a.nav-links(href="index.pug") Pricing
-							li
-								a.nav-links(href="index.pug") Blog
+							li.drop-down
+								a.nav-links(href="#") Blog
+								.dropdown-content
+									a(href="#") - Blog
+									a(href="#") - Blog Details
 							li
 								a.nav-links(href="index.pug") Contact
 					a.btn.booking-btn(href="#") Booking Now	
+					.navbar-toggler
+						span.toggler#hambar
+							span
+							span
+							span
+					.sidebar-menu#sidebar
+						.sidebar
+							ul
+								li
+									a.nav-links.sidebar-links(href="index.pug") Home
+								li.drop-down
+									a.nav-links.sidebar-links.has-down(href="#") Page
+								li
+									a.nav-links.sidebar-links(href="index.pug") About
+								li
+									a.nav-links.sidebar-links(href="index.pug") Service
+								li
+									a.nav-links.sidebar-links(href="index.pug") Pricing
+								li.drop-down
+									a.nav-links.sidebar-links.has-down(href="#") Blog
+								li
+									a.nav-links.sidebar-links(href="index.pug") Contact		
