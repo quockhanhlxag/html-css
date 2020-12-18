@@ -35,3 +35,13 @@ mixin progress(title, percentage, width)
     span= percentage
     .progress
       .progress-bar(role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")&attributes(attributes)= width 
+
+mixin cta(number, title, numberCharacter)
+  .cta__single.text-center
+    i(class!=attributes.class)
+    h2 
+      span.counter=number
+      if numberCharacter
+        = numberCharacter
+    h5=title
+
