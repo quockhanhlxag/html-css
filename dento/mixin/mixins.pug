@@ -1,9 +1,10 @@
-mixin cta(number, title, icon)
+mixin cta(number, title, numberCharacter)
   .cta__single.text-center
-    i(class!=attributes.class)= icon
+    i(class!=attributes.class)
     h2 
       span.counter=number
-      |+
+      if numberCharacter
+        = numberCharacter
     h5=title
 
 mixin progress(title, percentage, width)
