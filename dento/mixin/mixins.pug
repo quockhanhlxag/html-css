@@ -4,3 +4,41 @@ mixin cta(number, title, icon)
     h2
       span.counter=number
     h5=title
+    
+mixin progress(title, percentage, width)
+  .about__skills
+    h5= title
+    span= percentage
+    .progress
+      .progress-bar(role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")&attributes(attributes)= width 
+      
+mixin navigation-block
+  .menu
+    ul.navigation
+      li
+        a.nav-links(href="index.pug") Home
+      li.drop-down
+        a.nav-links(href="#") Page
+        .dropdown-content
+          a(href="#") - Home
+          a(href="#") - About Us
+          a(href="#") - Service
+          a(href="#") - Pricing
+          a(href="#") - Blog
+          a(href="#") - Blog Details
+          a(href="#") - Contact
+          a(href="#") - Dropdown
+
+      li
+        a.nav-links(href="index.pug") About
+      li
+        a.nav-links(href="index.pug") Service
+      li
+        a.nav-links(href="index.pug") Pricing
+      li.drop-down
+        a.nav-links(href="#") Blog
+        .dropdown-content
+          a(href="#") - Blog
+          a(href="#") - Blog Details
+      li
+        a.nav-links(href="index.pug") Contact
