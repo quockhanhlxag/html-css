@@ -28,8 +28,8 @@ function displaySidebar() {
 }
 
 function playVideo() {
+  
   // Gets the video src from the data-src on each button
-
   var $videoSrc;
   $('.video-btn').click(function () {
     $videoSrc = $(this).data("src");
