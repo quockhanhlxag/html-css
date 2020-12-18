@@ -1,0 +1,47 @@
+.service__block
+  .container
+    .row.align-items-center
+      .col-12.col-lg-6
+        .service__content
+          .section-heading.white
+            h2 Our Services
+            .line
+          .row
+            .col-6.col-md-4
+              .service__single  
+                img(src="https://preview.colorlib.com/theme/dento/img/core-img/s1.png" alt="Teeth Whitening")
+                h6 Teeth Whitening
+            .col-6.col-md-4
+              .service__single  
+                img(src="https://preview.colorlib.com/theme/dento/img/core-img/s2.png" alt="Missing Teeth")
+                h6 Missing Teeth
+            .col-6.col-md-4  
+              .service__single  
+                img(src="https://preview.colorlib.com/theme/dento/img/core-img/s3.png" alt="Teeth Whitening")
+                h6 Teeth Whitening
+            .col-6.col-md-4
+              .service__single  
+                img(src="https://preview.colorlib.com/theme/dento/img/core-img/s4.png" alt="Comic Dentistry")
+                h6 Comic Dentistry
+            .col-6.col-md-4
+              .service__single  
+                img(src="https://preview.colorlib.com/theme/dento/img/core-img/s5.png" alt="Examination")
+                h6 Examination
+            .col-6.col-md-4  
+              .service__single  
+                img(src="https://preview.colorlib.com/theme/dento/img/core-img/s1.png" alt="Teeth Pain")
+                h6 Teeth Pain
+      .col-12.col-lg-6    
+        .service__video 
+          img(src="https://preview.colorlib.com/theme/dento/img/bg-img/14.jpg" alt="Dento Video")
+          button.btn.btn-primary.video-btn(type='button' data-toggle='modal' data-src='https://www.youtube.com/embed/Jfrjeg26Cwk' data-target='#myModal')
+            i.fa.fa-play
+          #myModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+            .modal-dialog(role='document')
+              .modal-content
+                .modal-body
+                  button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') &times;
+                  // 16:9 aspect ratio
+                  .embed-responsive.embed-responsive-16by9
+                    iframe#video.embed-responsive-item(src='' allowscriptaccess='always' allow='autoplay')
