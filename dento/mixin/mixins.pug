@@ -1,3 +1,10 @@
+mixin progress(title, percentage, width)
+  .about__skills
+    h5= title
+    span= percentage
+    .progress
+      .progress-bar(role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")&attributes(attributes)= width 
+      
 mixin navigation-block
   .menu
     ul.navigation
