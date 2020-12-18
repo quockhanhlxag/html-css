@@ -3,14 +3,10 @@
     .cta__content
       .row    
         .col-12.col-sm-6.col-lg-3
-          .cta__single.text-center
-            i.fa.fa-atom
-            h2
-              span.counter 20
-            h5 Years Of Experience
+          +cta('20','Years Of Experience')(class='fa fa-atom')
         .col-12.col-sm-6.col-lg-3
-          +cta('700+','Happy Patients')(class='far fa-heart')
+          +cta('700','Happy Patients')(class='far fa-heart')
         .col-12.col-sm-6.col-lg-3
           +cta('120','Certificate')(class='fa fa-book')
         .col-12.col-sm-6.col-lg-3
-          +cta('40+','Dentist')(class='fa fa-address-card')
+          +cta('40','Dentist')(class='fa fa-address-card')
