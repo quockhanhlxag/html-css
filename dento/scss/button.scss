@@ -6,8 +6,15 @@
   border-radius: 2px;
   background-color: $primaryColor;
   transition: all 500ms;
+  min-width: 170px;
+  height: 46px;
+  line-height: 42px;
+  font-size: 14px;
+  color: $mainColor;
+  font-weight: 600;
 
   &:hover {
     color: $primaryColor;
+    background-color: transparent;
   }
 }

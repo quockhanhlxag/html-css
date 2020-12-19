@@ -14,7 +14,6 @@ mixin navigation-block
           a(href="#") - Blog Details
           a(href="#") - Contact
           a(href="#") - Dropdown
-
       li
         a.nav-links(href="index.pug") About
       li
@@ -44,4 +43,9 @@ mixin cta(number, title, numberCharacter)
       if numberCharacter
         = numberCharacter
     h5=title
+
+mixin table-td( ...items)
+  tr
+    each item in items     
+      td= item
 

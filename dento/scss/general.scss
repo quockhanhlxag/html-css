@@ -39,7 +39,7 @@ h6 {
 }
 
 .section-heading {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 
   h2 {
     font-size: 36px;
@@ -50,5 +50,13 @@ h6 {
     width: 70px;
     height: 4px;
     background-color: $primaryColor;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-heading {
+    h2 {
+      font-size: 24px;
+    }
   }
 }
