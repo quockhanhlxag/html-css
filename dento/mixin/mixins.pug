@@ -49,3 +49,17 @@ mixin table-td( ...items)
     each item in items     
       td= item
 
+mixin dentist-member(src, alt)
+  .dentist__member
+    img(src=src)
+    .dentist__content
+      .dentist__social-links
+        a(href="#")
+          i.fab.fa-facebook-f
+        a(href="#")
+          i.fab.fa-twitter
+        a(href="#")
+          i.fab.fa-google-plus-g
+      .dentist__info.text-center
+        h5 Michael Barley
+        p Implant Expert    

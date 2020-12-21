@@ -1,0 +1,82 @@
+.dentist {
+  &__block {
+    padding-top: 100px;
+  }
+
+  &__member {
+    position: relative;
+    z-index: 1;
+    transition-duration: 500ms;
+    background-color: #f4f4f4;
+    margin-bottom: 100px;
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+
+  &__social-links {
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 500ms;
+
+    a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $mainColor;
+      box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.15);
+      font-size: 14px;
+      text-align: center;
+      line-height: 40px;
+      color: $primaryColor;
+      margin: 0 7px;
+
+      &:hover {
+        background-color: $primaryColor;
+        color: $mainColor;
+      }
+    }
+  }
+
+  &__member:hover &__social-links {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__info {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 10px 15px;
+    text-align: center;
+
+    h5 {
+      color: $mainColor;
+      font-size: 18px;
+    }
+
+    p {
+      color: $mainColor;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: linear-gradient(to right, #2c455d, #00012c);
+      opacity: 0.85;
+    }
+  }
+
+
+}
