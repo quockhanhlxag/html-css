@@ -23,6 +23,19 @@
       background: linear-gradient(to right, #2c455d, #00012c);
       opacity: 0.85;
     }
+
+    &:hover .testimonial__arrow {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:hover #testimonial-prev {
+      left: 2%;
+    }
+
+    &:hover #testimonial-next {
+      right: 2%;
+    }
   }
 
   &__thumb {
@@ -84,19 +97,6 @@
 
 #testimonial-next {
   right: -5%;
-}
-
-.testimonial__block:hover .testimonial__arrow {
-  visibility: visible;
-  opacity: 1;
-}
-
-.testimonial__block:hover #testimonial-prev {
-  left: 2%;
-}
-
-.testimonial__block:hover #testimonial-next {
-  right: 2%;
 }
 
 @media (max-width: 767px) {
