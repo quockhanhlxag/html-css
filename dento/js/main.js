@@ -68,6 +68,16 @@ function numberCounter() {
   });
 }
 
+function initSlider() {
+  var slider = $('#slideshow')
+  slider.slick({
+    dots: false,
+    speed: 1000,
+    prevArrow: $('#testimonial-prev'),
+    nextArrow: $('#testimonial-next')
+  })
+}
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
   addStickyBar()
@@ -75,4 +85,5 @@ $(function () {
   displaySidebar()
   playVideo()
   numberCounter()
+  initSlider()
 })

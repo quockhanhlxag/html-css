@@ -49,3 +49,15 @@ mixin table-td( ...items)
     each item in items     
       td= item
 
+mixin testimonial
+  .testimonial__item
+    .testimonial__inner.d-flex.align-items-center
+      .testimonial__thumb
+        img(src='https://preview.colorlib.com/theme/dento/img/bg-img/8.jpg' alt='')
+      .testimonial__content
+        h5
+          | &ldquo;I&apos;d been avoiding the dentist for years due to bad experiences. A reminder SMS is sent the working day beforehand. I also had a call confirming appointment. I have been a patient ever since. My dentist is very reassuring and
+          | very helpful. Excellent treatment and advice.&rdquo;
+        h6 Arron Ramsey
+        p Dental Patient
+        
