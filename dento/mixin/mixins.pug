@@ -49,12 +49,39 @@ mixin table-td( ...items)
     each item in items     
       td= item
 
-mixin blog
+mixin dentist-member(src)
+  .dentist__member
+    img(src=src)
+    .dentist__content
+      .dentist__social-links
+        a(href="#")
+          i.fab.fa-facebook-f
+        a(href="#")
+          i.fab.fa-twitter
+        a(href="#")
+          i.fab.fa-google-plus-g
+      .dentist__info.text-center
+        h5 Michael Barley
+        p Implant Expert    
+
+mixin testimonial
+  .testimonial__item
+    .testimonial__inner.d-flex.align-items-center
+      .testimonial__thumb
+        img(src='https://preview.colorlib.com/theme/dento/img/bg-img/8.jpg' alt='')
+      .testimonial__content
+        h5
+          | &ldquo;I&apos;d been avoiding the dentist for years due to bad experiences. A reminder SMS is sent the working day beforehand. I also had a call confirming appointment. I have been a patient ever since. My dentist is very reassuring and
+          | very helpful. Excellent treatment and advice.&rdquo;
+        h6 Arron Ramsey
+        p Dental Patient
+
+mixin blog(src, title)
   .blog__single
     a(href="#")
-      img(src="https://preview.colorlib.com/theme/dento/img/bg-img/4.jpg" alt="bg-img4")
+      img(src=src)
     .blog__content   
-      a.post-title(href="#") How your mouth bacteria can harm your lungs
+      a.post-title(href="#")= title
       p
         | Donec tempor, lorem et euismod eleifend, est lectus laoreet ante, sed accusan justo diam ...
       .post-meta  

@@ -68,6 +68,31 @@ function numberCounter() {
   });
 }
 
+function initSlider() {
+  var slider = $('#slideshow')
+  slider.slick({
+    dots: false,
+    speed: 1000,
+    prevArrow: $('#testimonial-prev'),
+    nextArrow: $('#testimonial-next')
+  })
+}
+
+function showScrollUp() {
+  window.addEventListener("scroll", function () {
+    var scrollY = window.scrollY;
+    // console.log(scrollY)
+    var scrollUp = $(".scrollUp")
+
+    // console.log('scrollUp', scrollUp)
+    if (scrollY >= 400) {
+      scrollUp.addClass("active");
+    } else if (scrollY < 400) {
+      scrollUp.removeClass("active");
+    }
+  });
+}
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
   addStickyBar()
@@ -75,4 +100,6 @@ $(function () {
   displaySidebar()
   playVideo()
   numberCounter()
+  initSlider()
+  showScrollUp()
 })
