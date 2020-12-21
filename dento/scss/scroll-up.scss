@@ -12,11 +12,13 @@
   text-align: center;
   height: 40px;
   transition-duration: 500ms;
+  border: none;
   border-radius: 2px 0 0 2px;
 
   &:hover {
     color: $mainColor;
     background-color: $mainColor2;
+    border: none;
   }
 }
 
