@@ -79,11 +79,11 @@
   }
 }
 
-.prev-arrow {
+#testimonial-prev {
   left: -5%;
 }
 
-.next-arrow {
+#testimonial-next {
   right: -5%;
 }
 
@@ -92,11 +92,11 @@
   opacity: 1;
 }
 
-.testimonial__block:hover .prev-arrow {
+.testimonial__block:hover #testimonial-prev {
   left: 2%;
 }
 
-.testimonial__block:hover .next-arrow {
+.testimonial__block:hover #testimonial-next {
   right: 2%;
 }
 
