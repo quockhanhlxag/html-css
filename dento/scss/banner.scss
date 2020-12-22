@@ -1,0 +1,85 @@
+.banner {
+  &__block {
+    background-image: url(https://preview.colorlib.com/theme/dento/img/bg-img/2.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 200px 0;
+    color: $mainColor;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: linear-gradient(to right, #2c455d, #00012c);
+      opacity: 0.85;
+    }
+  }
+
+  &__text {
+    h2 {
+      font-size: 55px;
+      color: $mainColor;
+      margin-bottom: 30px;
+      display: block;
+    }
+
+    p {
+      font-size: 20px;
+      color: $mainColor;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__button {
+    a {
+      margin: 0 10px;
+    }
+
+    .banner-btn {
+      background-color: transparent;
+      color: $primaryColor;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    &__block {
+      padding: 90px 0;
+    }
+
+    &__text {
+      h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 567px) {
+  .banner {
+    &__text {
+      h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      p {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

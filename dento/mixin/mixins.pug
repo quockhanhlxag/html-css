@@ -49,7 +49,7 @@ mixin table-td( ...items)
     each item in items     
       td= item
 
-mixin dentist-member(src, alt)
+mixin dentist-member(src)
   .dentist__member
     img(src=src)
     .dentist__content
@@ -75,3 +75,19 @@ mixin testimonial
           | very helpful. Excellent treatment and advice.&rdquo;
         h6 Arron Ramsey
         p Dental Patient
+
+mixin blog(src, title)
+  .blog__single
+    a(href="#")
+      img(src=src)
+    .blog__content   
+      a.post-title(href="#")= title
+      p
+        | Donec tempor, lorem et euismod eleifend, est lectus laoreet ante, sed accusan justo diam ...
+      .post-meta  
+        a(href="#")  
+          i.far.fa-clock 
+          |  28 Sep 2018 
+        a(href="#") 
+          i.far.fa-comments
+          |  3 Comments

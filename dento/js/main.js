@@ -1,10 +1,8 @@
 function addStickyBar() {
   window.addEventListener("scroll", function () {
     var scrollY = window.scrollY;
-    // console.log(scrollY)
     var navbar = $("#nav-bar")
 
-    // console.log('navbar', navbar)
     if (scrollY >= 100) {
       navbar.addClass("sticky-navbar");
     } else if (scrollY < 100) {
@@ -28,14 +26,13 @@ function displaySidebar() {
 }
 
 function playVideo() {
-  
+
   // Gets the video src from the data-src on each button
   var $videoSrc;
   $('.video-btn').click(function () {
     $videoSrc = $(this).data("src");
   });
-  console.log($videoSrc);
-
+  
   // when the modal is opened autoplay it  
   $('#myModal').on('shown.bs.modal', function (e) {
 
@@ -78,6 +75,30 @@ function initSlider() {
   })
 }
 
+function showScrollUp() {
+  window.addEventListener("scroll", function () {
+    var scrollY = window.scrollY;
+    var scrollUp = $(".scrollUp")
+
+    if (scrollY >= 400) {
+      scrollUp.addClass("active");
+    } else if (scrollY < 400) {
+      scrollUp.removeClass("active");
+    }
+  });
+}
+
+function scrollAnimation() {
+  $('.scrollUp').click(function () {
+    var body = $("html, body");
+
+    body.animate({
+      scrollTop: 0
+    }, 500, "linear")
+  })
+
+}
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
   addStickyBar()
@@ -86,4 +107,6 @@ $(function () {
   playVideo()
   numberCounter()
   initSlider()
+  showScrollUp()
+  scrollAnimation()
 })
