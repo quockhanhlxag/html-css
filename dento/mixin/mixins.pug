@@ -1,0 +1,93 @@
+mixin navigation-block
+  .menu
+    ul.navigation
+      li
+        a.nav-links(href="index.pug") Home
+      li.drop-down
+        a.nav-links(href="#") Page
+        .dropdown-content
+          a(href="#") - Home
+          a(href="#") - About Us
+          a(href="#") - Service
+          a(href="#") - Pricing
+          a(href="#") - Blog
+          a(href="#") - Blog Details
+          a(href="#") - Contact
+          a(href="#") - Dropdown
+      li
+        a.nav-links(href="index.pug") About
+      li
+        a.nav-links(href="index.pug") Service
+      li
+        a.nav-links(href="index.pug") Pricing
+      li.drop-down
+        a.nav-links(href="#") Blog
+        .dropdown-content
+          a(href="#") - Blog
+          a(href="#") - Blog Details
+      li
+        a.nav-links(href="index.pug") Contact
+
+mixin progress(title, percentage, width)
+  .about__skills
+    h5= title
+    span= percentage
+    .progress
+      .progress-bar(role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")&attributes(attributes)= width 
+
+mixin cta(number, title, numberCharacter)
+  .cta__single.text-center
+    i(class!=attributes.class)
+    h2 
+      span.counter=number
+      if numberCharacter
+        = numberCharacter
+    h5=title
+
+mixin table-td( ...items)
+  tr
+    each item in items     
+      td= item
+
+mixin dentist-member(src)
+  .dentist__member
+    img(src=src)
+    .dentist__content
+      .dentist__social-links
+        a(href="#")
+          i.fab.fa-facebook-f
+        a(href="#")
+          i.fab.fa-twitter
+        a(href="#")
+          i.fab.fa-google-plus-g
+      .dentist__info.text-center
+        h5 Michael Barley
+        p Implant Expert    
+
+mixin testimonial
+  .testimonial__item
+    .testimonial__inner.d-flex.align-items-center
+      .testimonial__thumb
+        img(src='https://preview.colorlib.com/theme/dento/img/bg-img/8.jpg' alt='')
+      .testimonial__content
+        h5
+          | &ldquo;I&apos;d been avoiding the dentist for years due to bad experiences. A reminder SMS is sent the working day beforehand. I also had a call confirming appointment. I have been a patient ever since. My dentist is very reassuring and
+          | very helpful. Excellent treatment and advice.&rdquo;
+        h6 Arron Ramsey
+        p Dental Patient
+
+mixin blog(src, title)
+  .blog__single
+    a(href="#")
+      img(src=src)
+    .blog__content   
+      a.post-title(href="#")= title
+      p
+        | Donec tempor, lorem et euismod eleifend, est lectus laoreet ante, sed accusan justo diam ...
+      .post-meta  
+        a(href="#")  
+          i.far.fa-clock 
+          |  28 Sep 2018 
+        a(href="#") 
+          i.far.fa-comments
+          |  3 Comments
