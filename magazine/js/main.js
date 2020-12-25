@@ -1,11 +1,11 @@
 function addStickyBar() {
   window.addEventListener("scroll", function () {
     var scrollY = window.scrollY;
-    var navbar = $("#nav-bar")
+    var navbar = window.innerWidth >= 769 ? $(".magazine__header-main") : $(".header-container")
 
-    if (scrollY >= 100) {
+    if (scrollY >= 400) {
       navbar.addClass("sticky-navbar");
-    } else if (scrollY < 100) {
+    } else if (scrollY < 400) {
       navbar.removeClass("sticky-navbar");
     }
   });
@@ -18,9 +18,9 @@ function addRotateHambar() {
   })
 }
 
-function displaySidebar() {
+function displayDropdown() {
   document.getElementById("hambar").addEventListener("click", function () {
-    var sidebar = $("#sidebar")
+    var sidebar = $("#dropdown")
     sidebar.toggleClass("menu-on")
   })
 }
@@ -32,7 +32,7 @@ function playVideo() {
   $('.video-btn').click(function () {
     $videoSrc = $(this).data("src");
   });
-  
+
   // when the modal is opened autoplay it  
   $('#myModal').on('shown.bs.modal', function (e) {
 
@@ -65,13 +65,71 @@ function numberCounter() {
   });
 }
 
-function initSlider() {
-  var slider = $('#slideshow')
-  slider.slick({
+function initBannerSlider() {
+  $('.banner__slideshow').slick({
     dots: false,
+    arrows: false,
     speed: 1000,
-    prevArrow: $('#testimonial-prev'),
-    nextArrow: $('#testimonial-next')
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    slidesToShow: 4,
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 567,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3
+        }
+      }
+    ]
+  })
+}
+
+function initPostSlider() {
+  $('.lpost__slideshow').slick({
+    dots: false,
+    arrows: false,
+    speed: 1000,
+    fade: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1000,
+  })
+}
+
+function initSlider() {
+  $('.slider__slideshow').slick({
+    dots: false,
+    arrows: true,
+    speed: 1000,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    slidesToShow: 4,
+    prevArrow: $('.slider__prev'),
+    nextArrow: $('.slider__next'),
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 567,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3
+        }
+      }
+    ]
   })
 }
 
@@ -81,9 +139,9 @@ function showScrollUp() {
     var scrollUp = $(".scrollUp")
 
     if (scrollY >= 400) {
-      scrollUp.addClass("active");
+      scrollUp.fadeIn();
     } else if (scrollY < 400) {
-      scrollUp.removeClass("active");
+      scrollUp.fadeOut();
     }
   });
 }
@@ -103,9 +161,11 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
   addStickyBar()
   addRotateHambar()
-  displaySidebar()
+  displayDropdown()
   playVideo()
   numberCounter()
+  initBannerSlider()
+  initPostSlider()
   initSlider()
   showScrollUp()
   scrollAnimation()

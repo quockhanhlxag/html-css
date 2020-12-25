@@ -1,93 +1,75 @@
 mixin navigation-block
   .menu
-    ul.navigation
+    ul.navigation.justify-content-center
       li
-        a.nav-links(href="index.pug") Home
-      li.drop-down
-        a.nav-links(href="#") Page
-        .dropdown-content
-          a(href="#") - Home
-          a(href="#") - About Us
-          a(href="#") - Service
-          a(href="#") - Pricing
-          a(href="#") - Blog
-          a(href="#") - Blog Details
-          a(href="#") - Contact
-          a(href="#") - Dropdown
+        a.nav-links(href="index.pug") Lifestyle
       li
-        a.nav-links(href="index.pug") About
+        a.nav-links(href="index.pug") Business
       li
-        a.nav-links(href="index.pug") Service
+        a.nav-links(href="index.pug") Fashion
       li
-        a.nav-links(href="index.pug") Pricing
-      li.drop-down
-        a.nav-links(href="#") Blog
-        .dropdown-content
-          a(href="#") - Blog
-          a(href="#") - Blog Details
+        a.nav-links(href="index.pug") Design
       li
-        a.nav-links(href="index.pug") Contact
+        a.nav-links(href="index.pug") Health
+      li
+        a.nav-links(href="index.pug") Harmful
+      li
+        a.nav-links(href="index.pug") Technology
+      li
+        a.nav-links(href="index.pug") Travel
+      li
+        a.nav-links(href="index.pug") Food
+      li
+        a.nav-links(href="index.pug") Creative
 
-mixin progress(title, percentage, width)
-  .about__skills
-    h5= title
-    span= percentage
-    .progress
-      .progress-bar(role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")&attributes(attributes)= width 
+mixin banner(src)
+  .banner__single
+    .banner__item.magazine-img  
+      .banner__img.scale-img
+        img(src=src)
+        .video__icon.video__icon-2.banner__content
+          a(href="https://www.youtube.com/watch?v=up68UAfH0d0")
+            i.fas.fa-play
+      .banner__txt.text-center
+        p Trending
+        a(href="#") Calling time on irresponsible junk food advertising to children
 
-mixin cta(number, title, numberCharacter)
-  .cta__single.text-center
-    i(class!=attributes.class)
-    h2 
-      span.counter=number
-      if numberCharacter
-        = numberCharacter
-    h5=title
+mixin lpost(text)
+  .lpost__item
+    .lpost__inner
+      .lpost__trend-img.text-center.mb-30
+        img(src="https://preview.colorlib.com/theme/awesomemagazine/assets/img/gallery/latest-post.png" alt="")
+        .lpost__trend-txt
+          span Design
+          h2
+            a(href="#")= text
 
-mixin table-td( ...items)
-  tr
-    each item in items     
-      td= item
-
-mixin dentist-member(src)
-  .dentist__member
-    img(src=src)
-    .dentist__content
-      .dentist__social-links
-        a(href="#")
-          i.fab.fa-facebook-f
-        a(href="#")
-          i.fab.fa-twitter
-        a(href="#")
-          i.fab.fa-google-plus-g
-      .dentist__info.text-center
-        h5 Michael Barley
-        p Implant Expert    
-
-mixin testimonial
-  .testimonial__item
-    .testimonial__inner.d-flex.align-items-center
-      .testimonial__thumb
-        img(src='https://preview.colorlib.com/theme/dento/img/bg-img/8.jpg' alt='')
-      .testimonial__content
-        h5
-          | &ldquo;I&apos;d been avoiding the dentist for years due to bad experiences. A reminder SMS is sent the working day beforehand. I also had a call confirming appointment. I have been a patient ever since. My dentist is very reassuring and
-          | very helpful. Excellent treatment and advice.&rdquo;
-        h6 Arron Ramsey
-        p Dental Patient
-
-mixin blog(src, title)
-  .blog__single
-    a(href="#")
+mixin post(src)
+  .post__single.magazine-img
+    .post__thumbnail.scale-img
       img(src=src)
-    .blog__content   
-      a.post-title(href="#")= title
-      p
-        | Donec tempor, lorem et euismod eleifend, est lectus laoreet ante, sed accusan justo diam ...
-      .post-meta  
-        a(href="#")  
-          i.far.fa-clock 
-          |  28 Sep 2018 
-        a(href="#") 
-          i.far.fa-comments
-          |  3 Comments
+    .post__content   
+      p.post__tech Technology
+      h3
+        a(href="#") The pomelo case: scope of plant rights in china
+      p.post__text
+        | Indie Folks Start Out By Making Something They Want To Read, That Tell Stories They Want Told..
+
+mixin slider(src)
+  .slider__item
+    .slider__inner
+      .slider__single
+        a(href="#")
+          img(src=src)
+
+mixin tpost(src)
+  .tpost__single
+    .tpost__img
+      a(href="#")
+        img(src=src)
+    .tpost__title
+      h5 Trending
+      a(href="#") The pomelo case: scope of plant variety rights in China
+      p We present things in a way that isn’t sensational, said Ms. Cham mavanijakul, 20, whose family has roots...
+
+

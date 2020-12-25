@@ -1,84 +1,68 @@
 .banner {
-  &__block {
-    background-image: url(https://preview.colorlib.com/theme/dento/img/bg-img/2.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 200px 0;
-    color: $mainColor;
-    position: relative;
-    z-index: 1;
+  &__single {
+    transition: 0.4s;
+    margin-bottom: 30px;
 
-    &::after {
-      position: absolute;
-      content: "";
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      background: linear-gradient(to right, #2c455d, #00012c);
-      opacity: 0.85;
+    &:hover {
+      box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    }
+
+    &:hover .banner__content a {
+      transform: scale(0.5);
+      opacity: 1;
+      visibility: visible;
     }
   }
 
-  &__text {
-    h2 {
-      font-size: 55px;
-      color: $mainColor;
-      margin-bottom: 30px;
-      display: block;
+  &__img {
+    position: relative;
+  }
+
+  &__content {
+    a {
+      opacity: 0;
+      visibility: hidden;
+
+      i {
+        font-size: 35px;
+      }
     }
+  }
+
+  &__txt {
+    background: #fff;
+    padding: 22px 29px 32px 17px;
+    transition: 0.4s;
 
     p {
-      font-size: 20px;
-      color: $mainColor;
-      margin-bottom: 40px;
+      color: #707b8e;
+      text-transform: uppercase;
+      margin-bottom: 15px;
     }
-  }
 
-  &__button {
     a {
-      margin: 0 10px;
-    }
+      color: #191d34;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.4;
+      display: block;
+      text-transform: capitalize;
+      transition: 0.4s;
+      text-decoration: transparent;
 
-    .banner-btn {
-      background-color: transparent;
-      color: $primaryColor;
+      &:hover {
+        text-decoration: underline;
+        color: $primaryColor;
+      }
     }
   }
 }
 
 @media (max-width: 768px) {
   .banner {
-    &__block {
-      padding: 90px 0;
-    }
-
-    &__text {
-      h2 {
-        font-size: 36px;
-        margin-bottom: 20px;
-      }
-
-      p {
-        font-size: 16px;
-        margin-bottom: 30px;
-      }
-    }
-  }
-}
-
-@media (max-width: 567px) {
-  .banner {
-    &__text {
-      h2 {
-        font-size: 24px;
-        margin-bottom: 30px;
-      }
-
-      p {
-        margin-bottom: 40px;
+    &__txt {
+      a {
+        font-size: 14px;
       }
     }
   }

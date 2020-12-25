@@ -1,0 +1,39 @@
+.post {
+  &__block {
+    padding: 80px 0;
+  }
+
+  &__single {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
+    margin-bottom: 100px;
+  }
+
+  &__content {
+    background-color: $mainColor;
+    padding: 22px 29px 32px 17px;
+
+    .post__tech {
+      color: #707b8e;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    h3 a {
+      color: #191d34;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.4;
+      display: block;
+      text-transform: capitalize;
+      transition: 0.4s;
+    }
+
+    .post__text {
+      text-transform: capitalize;
+      color: #3B4855;
+      padding-top: 20px;
+    }
+  }
+}

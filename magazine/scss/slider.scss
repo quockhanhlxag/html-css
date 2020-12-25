@@ -1,0 +1,55 @@
+.slider {
+  &__block {
+    padding: 80px 0;
+  }
+
+  &__arrow {
+    position: absolute;
+    border: 0;
+    padding: 0;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    line-height: 55px;
+    background: $mainColor;
+    top: 50%;
+    transform: translateY(-50%);
+
+    i {
+      font-size: 20px;
+      color: #140c40;
+    }
+  }
+
+  &__prev {
+    left: -13px;
+    box-shadow: 0 3px 6px rgba(20, 12, 64, .5);
+  }
+
+  &__next {
+    right: 0;
+    background: #707070;
+
+    i {
+      color: $mainColor;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    &__arrow {
+      height: 40px;
+      width: 40px;
+      line-height: 43px;
+    }
+
+    &__prev {
+      left: 14px;
+    }
+
+    &__next {
+      right: 14px;
+    }
+  }
+}
