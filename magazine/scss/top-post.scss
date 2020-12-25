@@ -1,0 +1,45 @@
+.tpost {
+  &__single {
+    display: flex;
+    margin-bottom: 30px;
+
+    &:hover {
+      box-shadow: 0 22px 57px 0 rgba(34, 41, 72, .05);
+    }
+  }
+
+  &__img a img {
+    height: 100%;
+  }
+
+  &__title {
+    margin-left: 32px;
+
+    h5 {
+      font-size: 15px;
+      color: #bbb;
+      text-transform: uppercase;
+      margin-bottom: 17px;
+    }
+
+    a {
+      color: #140c40;
+      font-size: 26px;
+      transition: .4s;
+      margin-bottom: 16px;
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tpost {
+    &__single {
+      flex-direction: column;
+    }
+
+    &__title {
+      margin-left: 0px;
+    }
+  }
+}

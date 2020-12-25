@@ -1,0 +1,75 @@
+mixin navigation-block
+  .menu
+    ul.navigation.justify-content-center
+      li
+        a.nav-links(href="index.pug") Lifestyle
+      li
+        a.nav-links(href="index.pug") Business
+      li
+        a.nav-links(href="index.pug") Fashion
+      li
+        a.nav-links(href="index.pug") Design
+      li
+        a.nav-links(href="index.pug") Health
+      li
+        a.nav-links(href="index.pug") Harmful
+      li
+        a.nav-links(href="index.pug") Technology
+      li
+        a.nav-links(href="index.pug") Travel
+      li
+        a.nav-links(href="index.pug") Food
+      li
+        a.nav-links(href="index.pug") Creative
+
+mixin banner(src)
+  .banner__single
+    .banner__item.magazine-img  
+      .banner__img.scale-img
+        img(src=src)
+        .video__icon.video__icon-2.banner__content
+          a(href="https://www.youtube.com/watch?v=up68UAfH0d0")
+            i.fas.fa-play
+      .banner__txt.text-center
+        p Trending
+        a(href="#") Calling time on irresponsible junk food advertising to children
+
+mixin lpost(text)
+  .lpost__item
+    .lpost__inner
+      .lpost__trend-img.text-center.mb-30
+        img(src="https://preview.colorlib.com/theme/awesomemagazine/assets/img/gallery/latest-post.png" alt="")
+        .lpost__trend-txt
+          span Design
+          h2
+            a(href="#")= text
+
+mixin post(src)
+  .post__single.magazine-img
+    .post__thumbnail.scale-img
+      img(src=src)
+    .post__content   
+      p.post__tech Technology
+      h3
+        a(href="#") The pomelo case: scope of plant rights in china
+      p.post__text
+        | Indie Folks Start Out By Making Something They Want To Read, That Tell Stories They Want Told..
+
+mixin slider(src)
+  .slider__item
+    .slider__inner
+      .slider__single
+        a(href="#")
+          img(src=src)
+
+mixin tpost(src)
+  .tpost__single
+    .tpost__img
+      a(href="#")
+        img(src=src)
+    .tpost__title
+      h5 Trending
+      a(href="#") The pomelo case: scope of plant variety rights in China
+      p We present things in a way that isn’t sensational, said Ms. Cham mavanijakul, 20, whose family has roots...
+
+

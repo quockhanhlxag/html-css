@@ -1,0 +1,33 @@
+.footer {
+  &__footer {
+    padding: 100px 0 20px 0;
+    background-color: $mainColor;
+  }
+
+  &__nav {
+    padding-bottom: 120px;
+
+    .menu {
+      display: block;
+    }
+
+    .menu .navigation {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__copyright-content {
+    padding-top: 20px;
+    border-top: 1px solid #e5eae9;
+
+    .copyright__text {
+      color: #3B4855;
+      font-size: 16px;
+      line-height: 2;
+
+      a {
+        color: $primaryColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+header.header-container
+	.magazine__header-top
+		.container-fluid
+			.col-12
+				.row.d-flex.justify-content-between.align-items-center
+					.magazine__content-left
+						.form-group.search-form
+							input.form-control(type="text" name="Search" placeholder="Search your interest...")
+							.search-icon
+								i.fas.fa-search
+					.magazine__content-mid
+						.logo
+							a(href="index.pug")
+								img(src="https://preview.colorlib.com/theme/awesomemagazine/assets/img/logo/logo.png" alt="Logo")      
+					.magazine__content-right
+						ul
+							li 
+								a(href="#") About
+							li
+								a(href="#") Contact
+							li
+								a(href="#") Log in or sign up
+						.header-social    
+							a(href="#")
+								i.fab.fa-facebook-f
+							a(href="#")
+								i.fab.fa-twitter
+							a(href="#")
+								i.fab.fa-pinterest
+	.magazine__header-main
+		.container
+			nav.main-navigation
+				+navigation-block
+				.navbar-toggler
+					span.toggler#hambar
+						span
+						span
+						span
+				.mobile-menu#dropdown
+					ul.dropdown-nav
+						li
+							a(href="index.pug") Lifestyle
+						li
+							a(href="index.pug") Business
+						li
+							a(href="index.pug") Fashion
+						li
+							a(href="index.pug") Design
+						li
+							a(href="index.pug") Health
+						li
+							a(href="index.pug") Harmful
+						li
+							a(href="index.pug") Technology
+						li
+							a(href="index.pug") Travel
+						li
+							a(href="index.pug") Food
+						li
+							a(href="index.pug") Creative

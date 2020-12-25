@@ -1,0 +1,266 @@
+.magazine {
+  z-index: 10;
+
+  &__header-top {
+    padding: 30px 170px;
+
+    @media (width: 1690px) {
+      padding: 30px 120px;
+    }
+
+    @media (width: 1440px) {
+      padding: 30px 15px;
+    }
+
+
+    a {
+      color: #707070;
+    }
+  }
+
+  &__content-left {
+    .search-form {
+      position: relative;
+
+      input {
+        border: 1px solid #eee;
+        border-radius: 0;
+        padding: 10px 20px;
+        width: 450px;
+        color: $mainColor2;
+
+        @media (width: 1440px) {
+          width: 350px;
+        }
+      }
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 6px;
+      right: 1px;
+      padding: 7px 23px;
+      cursor: pointer;
+      top: 50%;
+      transform: translateY(-50%);
+
+      i {
+        color: $primaryColor;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__content-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul li {
+      display: inline-block;
+    }
+
+    ul li a {
+      padding-right: 36px;
+      font-size: 14px;
+      text-transform: capitalize;
+      color: $primaryColor;
+    }
+  }
+
+  &__header-main {
+    border-top: 1px solid #e6e5ea;
+  }
+}
+
+.header-social {
+  a {
+    display: inline-block;
+    color: #c7d2d8;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #c7d2d8;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 8px;
+
+    i {
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+    }
+
+    &:hover i {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-brand img {
+  width: 100%;
+}
+
+.nav-links {
+  font-size: 16px;
+  color: $mainColor2;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 20px 22px;
+  display: block;
+  font-size: 14px;
+  text-decoration: transparent;
+  font-weight: 600;
+  transition: .3s;
+
+  &:hover {
+    color: $primaryColor;
+    text-decoration: underline;
+  }
+}
+
+.sticky-navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 10px 15px rgba(25, 25, 25, .1);
+  border-bottom: none;
+  z-index: 20;
+  background-color: $mainColor;
+  animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+
+.navbar-toggler {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  .toggler span {
+    background-color: $primaryColor;
+    border-radius: 3px;
+    display: block;
+    height: 3px;
+    padding: 0;
+    margin-top: 5px;
+    width: 30px;
+    transition: 300ms;
+    position: relative;
+  }
+
+  .toggler {
+    display: inline-block;
+  }
+
+  .toggler.active span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 45deg);
+    top: 8px;
+  }
+
+  .toggler.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .toggler.active span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 1, -45deg);
+    top: -8px;
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+  top: 85px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.menu-on {
+  display: block;
+  height: 471px;
+}
+
+.dropdown-nav {
+  display: block;
+  background: $mainColor;
+  padding: 19px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+
+  li a {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    text-transform: capitalize;
+    padding: 10px 19px;
+    margin: 2px 5px;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 13px;
+  }
+
+  .magazine {
+    &__header-top {
+      padding: 0;
+    }
+
+    &__header-main {
+      border-top: none;
+    }
+
+    &__content-left {
+      display: none;
+    }
+
+    &__content-right {
+      display: none;
+    }
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .mobile-menu {
+    top: 65px;
+  }
+}

@@ -1,0 +1,69 @@
+.banner {
+  &__single {
+    transition: 0.4s;
+    margin-bottom: 30px;
+
+    &:hover {
+      box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    }
+
+    &:hover .banner__content a {
+      transform: scale(0.5);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__img {
+    position: relative;
+  }
+
+  &__content {
+    a {
+      opacity: 0;
+      visibility: hidden;
+
+      i {
+        font-size: 35px;
+      }
+    }
+  }
+
+  &__txt {
+    background: #fff;
+    padding: 22px 29px 32px 17px;
+    transition: 0.4s;
+
+    p {
+      color: #707b8e;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: #191d34;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.4;
+      display: block;
+      text-transform: capitalize;
+      transition: 0.4s;
+      text-decoration: transparent;
+
+      &:hover {
+        text-decoration: underline;
+        color: $primaryColor;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    &__txt {
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}

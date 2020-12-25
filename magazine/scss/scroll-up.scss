@@ -1,0 +1,20 @@
+.scrollUp {
+  position: fixed;
+  z-index: 2147483647;
+  display: none;
+  bottom: 18px;
+  font-size: 20px;
+  line-height: 40px;
+  right: 31px;
+  background-color: $primaryColor;
+  color: $mainColor;
+  height: 50px;
+  width: 50px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2);
+}
+
+.active {
+  display: block;
+}
