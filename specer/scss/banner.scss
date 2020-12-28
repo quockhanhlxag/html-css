@@ -1,0 +1,73 @@
+.banner {
+  &__block {
+    background-image: url(https://preview.colorlib.com/theme/specer/img/hero/hero-1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 200px 0;
+    color: $mainColor;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__text {
+    h4 {
+      color: #ffffff;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      font-size: 48px;
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__button {
+    .banner-btn {
+      font-size: 16px;
+      color: #ffffff;
+      background: #dd1515;
+      font-weight: 500;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 14px 36px 12px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    &__block {
+      padding: 90px 0;
+    }
+
+    &__text {
+      h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 567px) {
+  .banner {
+    &__text {
+      h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      p {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

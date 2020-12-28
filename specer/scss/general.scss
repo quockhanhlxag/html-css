@@ -1,0 +1,66 @@
+ul {
+  list-style: none;
+  padding: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  line-height: 1.9;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s all ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.white {
+  color: $mainColor;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+.section-heading {
+  margin-bottom: 50px;
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .line {
+    width: 70px;
+    height: 4px;
+    background-color: $primaryColor;
+  }
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .section-heading {
+    h2 {
+      font-size: 24px;
+    }
+  }
+}

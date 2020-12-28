@@ -1,0 +1,27 @@
+.scrollUp {
+  position: fixed;
+  z-index: 2147483647;
+  display: none;
+  bottom: 50px;
+  font-size: 22px;
+  line-height: 42px;
+  right: 0;
+  width: 40px;
+  background-color: $primaryColor;
+  color: $mainColor;
+  text-align: center;
+  height: 40px;
+  transition-duration: 500ms;
+  border: none;
+  border-radius: 2px 0 0 2px;
+
+  &:hover {
+    color: $mainColor;
+    background-color: $mainColor2;
+    border: none;
+  }
+}
+
+.active {
+  display: block;
+}
